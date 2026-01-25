@@ -1,0 +1,103 @@
+.header {
+  width: 1440px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  &-container {
+    width: 1090px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.header__list {
+  width: 916px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.logo {
+  margin-right: 81px;
+  width: 93px;
+  height: 38.15px;
+  display: flex;
+  .logo__icon {
+    width: 40px;
+    height: 38.15px;
+  }
+  .logo__text {
+    font-family: "Montserrat Alternates";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    margin: 2px 0 2px 9px;
+    .logo__text--accent {
+      font-family: "Sacramento";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #000000;
+      margin: 2px 0 1.15px 23px;
+    }
+  }
+}
+.header__dropdown {
+  width: 100px;
+  min-width: 100px;
+  height: 15px;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-title {
+    font-family: "Montserrat Alternates";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+  }
+}
+.header__list {
+  width: 220px;
+  height: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  .header__item {
+    width: auto;
+    height: 15px;
+  }
+  .header__link {
+    font-family: "Montserrat Alternates";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+  }
+  margin-right: 361px;
+}
+.header_welcome-block {
+  width: 185px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header__mode-img {
+    width: 40px;
+    height: 20px;
+  }
+  .header__welcome {
+    font-family: "Montserrat Alternates";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: right;
+    color: #000000;
+  }
+}

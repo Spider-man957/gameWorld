@@ -1,0 +1,123 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  background-color: #00000050;
+  z-index: 1000;
+}
+.modal__container {
+  width: 576px;
+  height: 316px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+.modal__close-btn {
+  width: 30px;
+  height: 30px;
+  padding: 15px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-color: transparent;
+}
+.modal__greeting {
+  width: 392px;
+  height: 60px;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #000000;
+  margin-top: 46px;
+}
+.modal__input-label {
+  width: auto;
+  height: auto;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #000000;
+  margin-top: 42px;
+}
+.modal__input {
+  width: 169px;
+  height: 35px;
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #7e7e7e;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  background-color: #d7d7d7;
+  border-radius: 20px;
+  margin: 18px 0 18px 0;
+  padding-left: 10px;
+}
+.modal__save-btn {
+  width: 105px;
+  height: 35px;
+  background-color: #000000;
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  box-shadow: 3px 3px 0 0 #00000025;
+  border-radius: 20px;
+}
+.modal__img-list {
+  width: 494px;
+  height: 106px;
+  position: relative; // исправлено
+  margin: 0 41px 0 41px;
+  li {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+    }
+    &:nth-child(2) {
+      top: 76px;
+      left: 44px;
+    }
+    &:nth-child(3) {
+      top: 0;
+      right: 0;
+    }
+    &:nth-child(4) {
+      top: 76px;
+      right: 44px;
+    }
+  }
+}
+.modal__img {
+  width: 30px;
+  height: 30px;
+}

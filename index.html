@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Magic</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap"
+      rel="stylesheet">
+  </head>
+  <body class="page">
+    <div class="page__container container">
+      <!-- <div class="modal modal--first">
+        <div class="modal__container">
+          <button class="modal__close-btn">
+            <svg class="modal__close-icon" width="16" height="16">
+              <use href="./symbols.svg#close_modal"></use>
+            </svg>
+          </button>
+          <p class="modal__greeting">
+            Привіт! Ви потрапили на сайт інтерактивних ігор та завдань Надіємось, що вам сподобається і ви отримаєте позитивні емоції! Бажаємо Вам гарно провести час!
+          </p>
+          <p class="modal__input-label">Введіть своє ім’я:</p>
+          <input class="modal__input" type="text" placeholder="Ваше ім’я...">
+          <button class="modal__save-btn">Зберегти</button>
+          <ul class="modal__img-list">
+            <li class="modal__img-item"><img class="modal__img" src="./img/knife.png" alt="knife"></li>
+            <li class="modal__img-item"><img class="modal__img" src="./img/puzzel.png" alt="puzzle"></li>
+            <li class="modal__img-item"><img class="modal__img" src="./img/game_developer.png" alt="game_developer"></li>
+            <li class="modal__img-item"><img class="modal__img" src="./img/tic_tuc_toy.png" alt="tic_tac_toe"></li>
+          </ul>
+        </div>
+      </div> -->
+      <header class="header">
+        <div class="header-container">
+          <div class="header__logo logo">
+            <svg class="logo__icon" width="42" height="39">
+              <use href="./symbols.svg#logo"></use>
+            </svg>
+            <p class="logo__text">Coding <span
+                class="logo__text--accent">Magic</span></p>
+          </div>
+          <div class="header__dropdown">
+            <p class="header__dropdown-title">Інтерактив</p>
+            <svg class="header__dropdown-arrow" width="10" height="6">
+              <use href="./symbols.svg#arow"></use>
+            </svg>
+          </div>
+          <ul class="header__list">
+            <li class="header__item">
+              <p class="header__link"> <a href="#" class="header__link">Наша
+                  команда</a></p>
+            </li>
+            <li>
+              <p class="header__link"> <a href="#"
+                  class="header__link">Контакти</a></p>
+            </li>
+          </ul>
+          <div class="header_welcome-block">
+            <img class="header__mode-img" src="./img/black_mode.png"
+              alt="black_mode">
+            <p class="header__welcome">Вітаємо, User!</p>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="main__section main__section--games">
+          <h1 class="main__title">Популярні інетрактивні ігри</h1>
+          <div class="main__line line"></div>
+        </section>
+        <section class="main__section main__section--year-check">
+          <h2 class="main__subtitle">Перевір в який рік ти народився</h2>
+          <div class="year-check-block">
+            <div class="year-check_input-block">
+              <input class="main__input" type="text"
+                placeholder="Введіть рік народження">
+              <button class="main__btn">
+                <svg class="main__btn-icon" width="16" height="16">
+                  <use href="./symbols.svg#lupa"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <p class="main__result"></p>
+        </section>
+        <section class="main__section main__section--guess-number">
+          <h2 class="main__subtitle">Вгадай число, яке загадав комп’ютер</h2>
+          <div class="main__guess-block">
+            <div class="input">
+              <input class="main__input" type="text"
+                placeholder="Введіть число">
+              <button class="main__btn">
+                <svg class="main__btn-icon" width="16" height="16">
+                  <use href="./symbols.svg#lupa"></use>
+                </svg>
+              </button>
+            </div>
+            <p class="main__result"></p>
+          </div>
+          <div class="main__line line"></div>
+
+        </section>
+        <section class="main__section main__section--rps">
+          <h2 class="main__subtitle">Камінь - ножиці - папір</h2>
+          <div class="rps_ul-block">
+            <ul class="main__rps-list">
+              <li class="main__rps-item"><img class="main__rps-img"
+                  src="./img/stone.png" alt="stone"></li>
+              <li class="main__rps-item"><img class="main__rps-img"
+                  src="./img/cluck.png" alt="sucssions"></li>
+              <li class="main__rps-item"><img class="main__rps-img"
+                  src="./img/paper.png" alt="paper"></li>
+            </ul>
+            <ul class="main__score-list">
+              <li class="main__score-item"><p class="main__score-label">Рахунок:</p></li>
+              <li class="main__score-item"><p class="main__score-label">Комп’ютер
+                  - </p></li>
+              <li class="main__score-item"><p class="main__score-label">Ви -
+                </p></li>
+            </ul>
+          </div>
+          <p class="main__result">Ви виграли раунд!</p>
+          <button class="main__btn">Варіант комп’ютера</button>
+          <div class="main__line line"></div>
+        </section>
+        <section class="main__section main__section--calc">
+          <h2 class="main__subtitle">Калькулятор</h2>
+          <div class="main__calc-block">
+            <input class="main__input" type="text" placeholder="Введіть число">
+            <ul class="main__calc-ops">
+              <li class="main__calc-op"><button
+                  class="main__btn">+</button></li>
+              <li class="main__calc-op"><button
+                  class="main__btn">*</button></li>
+              <li class="main__calc-op"><button
+                  class="main__btn">-</button></li>
+              <li class="main__calc-op"><button
+                  class="main__btn">/</button></li>
+            </ul>
+            <input class="main__input" type="text" placeholder="Введіть число">
+            <button class="main__btn">=</button>
+            <input class="main__input" type="text" placeholder="Результат">
+          </div>
+          <div class="main__line line"></div>
+        </section>
+        <section class="main__section main__section--time-calc">
+          <h2 class="main__subtitle">Калькулятор часу</h2>
+          <div class="main__time-block">
+            <div class="main__time-group group">
+              <input class="main__input" type="text"
+                placeholder="Введіть число">
+              <button class="main__btn">
+                <svg class="main__btn-icon" width="16" height="16">
+                  <use href="./symbols.svg#lupa"></use>
+                </svg>
+              </button>
+            </div>
+            <svg class="main__time-line" width="100" height="1">
+              <use href="./symbols.svg#line"></use>
+            </svg>
+            <p class="main__result">3 дн. 15:45:01</p>
+          </div>
+          <div class="main__line line"></div>
+        </section>
+        <section class="main__section main__section--dino">
+          <h2 class="main__subtitle">Google динозавр</h2>
+          <div class="main__line line"></div>
+        </section>
+        <section class="main__section main__section--football">
+          <h2 class="main__subtitle">Футбол</h2>
+          <div class="main__football-field pole_for_footboll">
+            <div class="main__football-ball ballon"></div>
+          </div>
+          <div class="main__line line"></div>
+        </section>
+        <section class="main__section main__section--three-numbers">
+          <h2 class="main__subtitle">Введіть 3 числа</h2>
+          <ul class="main__numbers-list">
+            <li class="main__numbers-item"><input class="main__input"
+                type="text" placeholder="Введіть число"></li>
+            <li class="main__numbers-item"><input class="main__input"
+                type="text" placeholder="Введіть число"></li>
+            <li class="main__numbers-item"><input class="main__input"
+                type="text" placeholder="Введіть число"></li>
+          </ul>
+          <p class="main__result">Найбільше число, яке ви ввели - (число)</p>
+          <div class="main__line line"></div>
+        </section>
+        <section class="team">
+          <h2 class="team__title">Наша команда</h2>
+          <div class="team__slider">
+            <svg class="team__arrow team__arrow--left" width="52" height="101">
+              <use href="./symbols.svg#left_arow"></use>
+            </svg>
+            <svg class="team__arrow team__arrow--right" width="52" height="101">
+              <use href="./symbols.svg#right_arow"></use>
+            </svg>
+            <div class="team__slides"></div>
+          </div>
+          <p class="team__name">Ім’я студента</p>
+          <p class="team__info">Інформація про роботу, яку він/вона
+            виконав/ла</p>
+          <ul class="team__list">
+            <li class="team__item"></li>
+            <li class="team__item"></li>
+            <li class="team__item"></li>
+            <li class="team__item"></li>
+            <li class="team__item"></li>
+            <li class="team__item"></li>
+            <li class="team__item"></li>
+          </ul>
+          <div class="team__line line"></div>
+        </section>
+        <section class="main__section main__section--scientists">
+          <h2 class="main__subtitle">Обери вченого/их</h2>
+          <ul class="main__scientists-list">
+            <li class="main__scientists-item"></li>
+            <li class="main__scientists-item"></li>
+            <li class="main__scientists-item"></li>
+            <li class="main__scientists-item"></li>
+            <li class="main__scientists-item"></li>
+            <li class="main__scientists-item"></li>
+            <li class="main__scientists-item"></li>
+            <li class="main__scientists-item"></li>
+            <li class="main__scientists-item"></li>
+            <li class="main__scientists-item"></li>
+            <li class="main__scientists-item"></li>
+            <li class="main__scientists-item"></li>
+          </ul>
+          <ul class="main__scientists-actions">
+            <li class="main__scientists-action"><button class="main__btn">Які
+                вчені народилися в 19 ст.</button></li>
+            <li class="main__scientists-action"><button
+                class="main__btn">Відсортувати вчених за алфавітом</button></li>
+            <li class="main__scientists-action"><button
+                class="main__btn">Відсортувати вчених за кількістю прожитих
+                років</button></li>
+            <li class="main__scientists-action"><button class="main__btn">Знайти
+                вченого, який народився найпізніше</button></li>
+            <li class="main__scientists-action"><button class="main__btn">Знайти
+                рік народження Albert Einshtein</button></li>
+            <li class="main__scientists-action"><button class="main__btn">Знайти
+                вчених, прізвища яких починаються на на літеру “С”
+              </button></li>
+            <li class="main__scientists-action"><button
+                class="main__btn">Видалити всіх вчених, ім’я яких починається на
+                “А”</button></li>
+            <li class="main__scientists-action"><button class="main__btn">Знайти
+                вченого, який прожив найдовше і вченого, який прожив
+                найменше</button></li>
+            <li class="main__scientists-action"><button class="main__btn">Знайти
+                вчених, в яких співпадають перші літери імені і
+                прізвища</button></li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer footer--bottom">
+        <div class="footer__logo logo">
+          <svg class="logo__icon" width="42" height="39">
+            <use href="./symbols.svg#logo"></use>
+          </svg>
+          <p class="logo__text">Coding <span
+              class="logo__text--accent">Magic</span></p>
+        </div>
+        <p class="footer__contacts">Тел: +38 (123) 456 78 90 E-Mail:
+          codingmagic@gmail.com Facebook: CodingMagic Twitter: CodingMagic
+          Instagram: CodingMagic</p>
+        <div class="footer__subscribe">
+          <div class="footer__subscribe-form">
+            <input class="footer__subscribe-input" type="text"
+              placeholder="Ваша ел. адреса...">
+            <button class="footer__subscribe-btn">Підписатись</button>
+          </div>
+          <p class="footer__subscribe-note">*Підписавшись, Ви зможете ортимувати
+            інформаццію про новинки на сайті</p>
+        </div>
+      </footer>
+    </div>
+    <!-- <div class="modal modal--second seckond_modal">
+      <button class="modal__close-btn">
+        <svg class="modal__close-icon" width="16" height="16">
+          <use href="./symbols.svg#close_modal"></use>
+        </svg>
+      </button>
+      <p class="modal__thanks">Дякую за підписку!</p>
+      <ul class="modal__img-list">
+        <li class="modal__img-item"><img class="modal__img" src="./img/knife.png" alt="knife"></li>
+        <li class="modal__img-item"><img class="modal__img" src="./img/puzzel.png" alt="puzzle"></li>
+        <li class="modal__img-item"><img class="modal__img" src="./img/game_developer.png" alt="game_developer"></li>
+        <li class="modal__img-item"><img class="modal__img" src="./img/tic_tuc_toy.png" alt="tic_tac_toe"></li>
+      </ul>
+    </div> -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
