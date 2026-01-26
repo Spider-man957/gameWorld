@@ -404,15 +404,9 @@ main .main__section {
 
 .main__section--rps {
   position: relative;
+  width: 1090px;
   height: 274px;
   justify-content: space-between;
-}
-.main__section--rps .rps_ul-block {
-  width: 453px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  margin-left: 140px;
 }
 .main__section--rps .main__rps-list {
   width: 256px;
@@ -436,7 +430,7 @@ main .main__section {
 }
 .main__section--rps .main__score-list {
   width: 93px;
-  height: 50px;
+  height: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -445,7 +439,117 @@ main .main__section {
   font-weight: 400;
   font-size: 12px;
   color: #000000;
-  margin-left: 104px;
+  position: absolute;
+  top: 56px;
+  left: 500px;
+}
+.main__section--rps .main__btn {
+  width: 182px;
+  height: 35px;
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.main__result {
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #039900;
+}
+
+.main__section--calc {
+  height: 152px;
+  justify-content: space-between;
+}
+.main__section--calc .main__calc-block {
+  width: 629px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main__section--calc .main__input {
+  width: 135px;
+  height: 35px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.2078431373);
+  background-color: #d7d7d7;
+  padding: 10px 20px;
+}
+.main__section--calc .main__input:nth-child(5) {
+  width: 118px;
+}
+.main__section--calc .main__calc-ops {
+  width: 62px;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #ffffff;
+}
+.main__section--calc .main__calc-op {
+  width: 27px;
+  height: 25px;
+}
+.main__section--calc .main__btn {
+  width: 27px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.2078431373);
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.main__section--time-calc {
+  height: 127px;
+  width: 536px;
+  position: relative;
+  justify-content: space-between;
+}
+.main__section--time-calc .main__time-block {
+  width: 392px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 36px;
+  left: 35px;
+}
+.main__section--time-calc .main__time-group {
+  width: 150px;
+  height: 35px;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.2078431373);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.main__section--time-calc .main__input {
+  width: 115px;
+  height: 35px;
+}
+.main__section--time-calc .main__result {
+  color: #000000;
+}
+
+.main__section--dino {
+  height: 297px;
+  width: 720px;
+  justify-content: space-between;
 }
 
 .container {
