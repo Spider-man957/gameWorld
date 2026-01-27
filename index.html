@@ -13,27 +13,34 @@
   </head>
   <body class="page">
     <div class="page__container container">
-      <!-- <div class="modal modal--first">
+      <div class="modal modal--first" id="first_modal">
         <div class="modal__container">
-          <button class="modal__close-btn">
+          <button class="modal__close-btn" id="modal1_close-btn">
             <svg class="modal__close-icon" width="16" height="16">
               <use href="./symbols.svg#close_modal"></use>
             </svg>
           </button>
           <p class="modal__greeting">
-            Привіт! Ви потрапили на сайт інтерактивних ігор та завдань Надіємось, що вам сподобається і ви отримаєте позитивні емоції! Бажаємо Вам гарно провести час!
+            Привіт! <br>
+            Ви потрапили на сайт інтерактивних ігор та завдань Надіємось, що вам
+            сподобається і ви отримаєте позитивні емоції! Бажаємо Вам гарно
+            провести час!
           </p>
           <p class="modal__input-label">Введіть своє ім’я:</p>
           <input class="modal__input" type="text" placeholder="Ваше ім’я...">
-          <button class="modal__save-btn">Зберегти</button>
+          <button class="modal__save-btn" id="modal_btn-save">Зберегти</button>
           <ul class="modal__img-list">
-            <li class="modal__img-item"><img class="modal__img" src="./img/knife.png" alt="knife"></li>
-            <li class="modal__img-item"><img class="modal__img" src="./img/puzzel.png" alt="puzzle"></li>
-            <li class="modal__img-item"><img class="modal__img" src="./img/game_developer.png" alt="game_developer"></li>
-            <li class="modal__img-item"><img class="modal__img" src="./img/tic_tuc_toy.png" alt="tic_tac_toe"></li>
+            <li class="modal__img-item"><img class="modal__img"
+                src="./img/knife.png" alt="knife"></li>
+            <li class="modal__img-item"><img class="modal__img"
+                src="./img/puzzel.png" alt="puzzle"></li>
+            <li class="modal__img-item"><img class="modal__img"
+                src="./img/game_developer.png" alt="game_developer"></li>
+            <li class="modal__img-item"><img class="modal__img"
+                src="./img/tic_tuc_toy.png" alt="tic_tac_toe"></li>
           </ul>
         </div>
-      </div> -->
+      </div>
       <header class="header">
         <div class="header-container">
           <div class="header__logo logo">
@@ -62,7 +69,7 @@
           <div class="header_welcome-block">
             <img class="header__mode-img" src="./img/black_mode.png"
               alt="black_mode">
-            <p class="header__welcome">Вітаємо, User!</p>
+            <p class="header__welcome" id="header_name-wlk">Вітаємо, User!</p>
           </div>
         </div>
       </header>
@@ -76,29 +83,31 @@
           <div class="year-check-block">
             <div class="year-check_input-block">
               <input class="main__input" type="text"
-                placeholder="Введіть рік народження">
-              <button class="main__btn">
+                placeholder="Введіть рік народження" id="yearCheckInput">
+              <button class="main__btn" id="yearCheckBtn">
                 <svg class="main__btn-icon" width="16" height="16">
                   <use href="./symbols.svg#lupa"></use>
                 </svg>
               </button>
             </div>
+          <p class="main__result" id="mainResultYear"></p>
+
           </div>
-          <p class="main__result"></p>
+          <div class="main__line line"></div>
         </section>
         <section class="main__section main__section--guess-number">
           <h2 class="main__subtitle">Вгадай число, яке загадав комп’ютер</h2>
           <div class="main__guess-block">
             <div class="input">
               <input class="main__input" type="text"
-                placeholder="Введіть число">
-              <button class="main__btn">
+                placeholder="Введіть число" id="guessNumberInput">
+              <button class="main__btn" id="guessNumberBtn">
                 <svg class="main__btn-icon" width="16" height="16">
                   <use href="./symbols.svg#lupa"></use>
                 </svg>
               </button>
             </div>
-            <p class="main__result"></p>
+            <p class="main__result" id="guessNumberResult"></p>
           </div>
           <div class="main__line line"></div>
 
@@ -171,7 +180,7 @@
         <section class="main__section main__section--football">
           <h2 class="main__subtitle">Футбол</h2>
           <div class="main__football-field pole_for_footboll">
-            <div class="main__football-ball ballon"></div>
+            <img src="./img/ball.png" alt="ball" class="main_ball">
           </div>
           <div class="main__line line"></div>
         </section>

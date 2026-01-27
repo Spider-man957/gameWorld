@@ -22,27 +22,34 @@
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
+  background-color: #ffffff;
 }
 .modal__close-btn {
   width: 30px;
   height: 30px;
-  padding: 15px;
+  // padding: 15px;
   position: absolute;
   right: 15px;
   top: 15px;
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .modal__close-icon {
+    width: 15px;
+    height: 15px;
+  }
 }
 .modal__greeting {
   width: 392px;
   height: 60px;
-  text-align: center;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-  color: #000000;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+color: #000000;
   margin-top: 46px;
 }
 .modal__input-label {
@@ -93,8 +100,10 @@
 .modal__img-list {
   width: 494px;
   height: 106px;
-  position: relative; // исправлено
-  margin: 0 41px 0 41px;
+  z-index: -1;
+  position: absolute;
+  top: 154px;
+  left: 41px;
   li {
     width: 30px;
     height: 30px;
