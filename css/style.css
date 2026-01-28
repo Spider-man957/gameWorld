@@ -438,7 +438,8 @@ main .main__section {
   height: 40px;
 }
 .main__section--rps .main__score-list {
-  width: 93px;
+  width: auto;
+  min-width: 100px;
   height: 60px;
   display: flex;
   flex-direction: column;
@@ -451,6 +452,10 @@ main .main__section {
   position: absolute;
   top: 56px;
   left: 500px;
+}
+.main__section--rps .main__score-list li {
+  min-width: 90px;
+  max-width: 120px;
 }
 .main__section--rps .main__btn {
   width: 182px;
@@ -474,6 +479,19 @@ main .main__section {
 .main__section--calc {
   height: 152px;
   justify-content: space-between;
+}
+.main__section--calc .calc_result {
+  min-width: 118px;
+  width: auto;
+  height: 35px;
+  border-radius: 20px;
+  background-color: #d7d7d7;
+  color: #7e7e7e;
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 10px 20px;
 }
 .main__section--calc .main__calc-block {
   width: 629px;

@@ -32,7 +32,7 @@ if (yearCheckBtn) {
   yearCheckBtn.addEventListener("mousedown", (event) => {
     let year = Number(yearCheckInput.value);
     if (isNaN(year) || !yearCheckInput.value.trim()) {
-      alert("Вы не ввели число!");
+      alert("You didn't write a number");
     } else {
       year = yearCheckInput.value;
       if (year % 4 === 0) {
@@ -46,7 +46,135 @@ if (yearCheckBtn) {
   });
 }
 
-
 let guessNumberInput = document.getElementById("guessNumberInput");
 let guessNumberBtn = document.getElementById("guessNumberBtn");
 let guessNumberResult = document.getElementById("guessNumberResult");
+guessNumberBtn.addEventListener("mousedown", (event) => {
+  let randomNumber = Math.floor(Math.random() * 10) + 1;
+  let yourNumber = Number(guessNumberInput.value);
+
+  if (isNaN(yourNumber) || !guessNumberInput.value.trim()) {
+    alert("You didn't write a number");
+  } else {
+    if (randomNumber === yourNumber) {
+      guessNumberResult.innerHTML = `Вітаю, ви вгадали число! ${yourNumber}`;
+      guessNumberResult.style.color = "#039900";
+    } else {
+      guessNumberResult.innerHTML = `Ви програли, комп’ютер загадав ${randomNumber}`;
+      guessNumberResult.style.color = "#990000";
+    }
+  }
+});
+
+let stoneBtn = document.getElementById("rpsStoneBtn");
+let sucssionsBtn = document.getElementById("rpsSucssionsBtn");
+let paperBtn = document.getElementById("rpsPaperBtn");
+let yourChoose;
+let rpsControlNumber = document.getElementById("rpsControlNumber");
+let yourWin = 0;
+let yourLose = 0;
+let rpsYourLoseText = document.getElementById("rpsYourLose");
+let rpsYourWinText = document.getElementById("rpsYourWin");
+rpsYourLoseText.innerHTML = `Комп’ютер - ${yourLose}`;
+rpsYourWinText.innerHTML = `Ви - ${yourWin}`;
+let rpsYourResult = document.getElementById("rpsYourResult");
+stoneBtn.addEventListener("mousedown", () => {
+  yourChoose = 1;
+});
+sucssionsBtn.addEventListener("mousedown", () => {
+  yourChoose = 2;
+});
+paperBtn.addEventListener("mousedown", () => {
+  yourChoose = 3;
+});
+rpsControlNumber.addEventListener("click", () => {
+  let randomRps = Math.floor(Math.random() * 3) + 1;
+
+  if (yourChoose === 1 || yourChoose === 2 || yourChoose === 3) {
+    if (
+      (yourChoose === 1 && randomRps === 2) ||
+      (yourChoose === 2 && randomRps === 3) ||
+      (yourChoose === 3 && randomRps === 1)
+    ) {
+      yourWin += 1;
+      rpsYourWinText.innerHTML = `Ви - ${yourWin}`;
+      rpsYourResult.innerHTML = "Ви виграли раунд!";
+      rpsYourResult.style.color = "#039900";
+    }
+    if (
+      (yourChoose === 1 && randomRps === 3) ||
+      (yourChoose === 2 && randomRps === 1) ||
+      (yourChoose === 3 && randomRps === 2)
+    ) {
+      yourLose += 1;
+      rpsYourLoseText.innerHTML = `Комп’ютер - ${yourLose}`;
+      rpsYourResult.innerHTML = "Комп’ютер виграв раунд!";
+      rpsYourResult.style.color = "#990000";
+    }
+  } else {
+    alert("You haven't choosen anythink");
+  }
+});
+
+// number
+let calcFirstNumber = document.getElementById("calcFirstNumber");
+let calcSeckondNumber = document.getElementById("calcSeckondNumber");
+let calcResult = document.getElementById("calcResult");
+// btn
+let calcBtnPlus = document.getElementById("calcBtnPlus");
+let calcBtnNasobeni = document.getElementById("calcBtnNasobeni");
+let calcBtnMinus = document.getElementById("calcBtnMinus");
+let calcBtnDeleni = document.getElementById("calcBtnDeleni");
+let calcBtnResult = document.getElementById("calcBtnResult");
+let calcOperation;
+calcBtnPlus.addEventListener("click", () => {
+  if (
+    isNaN(calcFirstNumber.value) ||
+    !calcFirstNumber.value.trim() ||
+    isNaN(calcSeckondNumber.value) ||
+    !calcSeckondNumber.value.trim()
+  ) {
+    alert("You haven't wroten a number!!!");
+  } else {
+    calcOperation = Number(calcFirstNumber.value) + Number(calcSeckondNumber.value);
+  }
+});
+calcBtnMinus.addEventListener("click", () => {
+  if (
+    isNaN(calcFirstNumber.value) ||
+    !calcFirstNumber.value.trim() ||
+    isNaN(calcSeckondNumber.value) ||
+    !calcSeckondNumber.value.trim()
+  ) {
+    alert("You haven't wroten a number!!!");
+  } else {
+    calcOperation = Number(calcFirstNumber.value) - Number(calcSeckondNumber.value);
+  }
+});
+calcBtnNasobeni.addEventListener("click", () => {
+  if (
+    isNaN(calcFirstNumber.value) ||
+    !calcFirstNumber.value.trim() ||
+    isNaN(calcSeckondNumber.value) ||
+    !calcSeckondNumber.value.trim()
+  ) {
+    alert("You haven't wroten a number!!!");
+  } else {
+    calcOperation = Number(calcFirstNumber.value) * Number(calcSeckondNumber.value);
+  }
+});
+calcBtnDeleni.addEventListener("click", () => {
+  if (
+    isNaN(calcFirstNumber.value) ||
+    !calcFirstNumber.value.trim() ||
+    isNaN(calcSeckondNumber.value) ||
+    !calcSeckondNumber.value.trim()
+  ) {
+    alert("You haven't wroten a number!!!");
+  } else {
+    calcOperation = Number(calcFirstNumber.value) / Number(calcSeckondNumber.value);
+  }
+});
+calcBtnResult.addEventListener("click", () => {
+  calcResult.innerHTML = calcOperation;
+});

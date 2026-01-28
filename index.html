@@ -90,7 +90,7 @@
                 </svg>
               </button>
             </div>
-          <p class="main__result" id="mainResultYear"></p>
+            <p class="main__result" id="mainResultYear"></p>
 
           </div>
           <div class="main__line line"></div>
@@ -115,42 +115,47 @@
         <section class="main__section main__section--rps">
           <h2 class="main__subtitle">Камінь - ножиці - папір</h2>
           <ul class="main__rps-list">
-            <li class="main__rps-item"><img class="main__rps-img"
+            <li class="main__rps-item" id="rpsStoneBtn"><img
+                class="main__rps-img"
                 src="./img/stone.png" alt="stone"></li>
-            <li class="main__rps-item"><img class="main__rps-img"
+            <li class="main__rps-item" id="rpsSucssionsBtn"><img
+                class="main__rps-img"
                 src="./img/cluck.png" alt="sucssions"></li>
-            <li class="main__rps-item"><img class="main__rps-img"
+            <li class="main__rps-item" id="rpsPaperBtn"><img
+                class="main__rps-img"
                 src="./img/paper.png" alt="paper"></li>
           </ul>
           <ul class="main__score-list">
             <li class="main__score-item"><p
                 class="main__score-label">Рахунок:</p></li>
-            <li class="main__score-item"><p class="main__score-label">Комп’ютер
-                - </p></li>
-            <li class="main__score-item"><p class="main__score-label">Ви -
-              </p></li>
+            <li class="main__score-item" id="rpsYourLose"></li>
+            <li class="main__score-item" id="rpsYourWin"></li>
           </ul>
-          <p class="main__result">Ви виграли раунд!</p>
-          <button class="main__btn">Варіант комп’ютера</button>
+          <p class="main__result" id="rpsYourResult"></p>
+          <!-- Ви виграли раунд! -->
+          <button class="main__btn" id="rpsControlNumber">Варіант
+            комп’ютера</button>
           <div class="main__line line"></div>
         </section>
         <section class="main__section main__section--calc">
           <h2 class="main__subtitle">Калькулятор</h2>
           <div class="main__calc-block">
-            <input class="main__input" type="text" placeholder="Введіть число">
+            <input class="main__input" type="text" placeholder="Введіть число"
+              id="calcFirstNumber">
             <ul class="main__calc-ops">
-              <li class="main__calc-op"><button
+              <li class="main__calc-op" id="calcBtnPlus"><button
                   class="main__btn">+</button></li>
-              <li class="main__calc-op"><button
+              <li class="main__calc-op" id="calcBtnNasobeni"><button
                   class="main__btn">*</button></li>
-              <li class="main__calc-op"><button
+              <li class="main__calc-op" id="calcBtnMinus"><button
                   class="main__btn">-</button></li>
-              <li class="main__calc-op"><button
+              <li class="main__calc-op" id="calcBtnDeleni"><button
                   class="main__btn">/</button></li>
             </ul>
-            <input class="main__input" type="text" placeholder="Введіть число">
-            <button class="main__btn">=</button>
-            <input class="main__input" type="text" placeholder="Результат">
+            <input class="main__input" type="text" placeholder="Введіть число"
+              id="calcSeckondNumber">
+            <button class="main__btn" id="calcBtnResult">=</button>
+            <p class="calc_result" id="calcResult">Результат</p>
           </div>
           <div class="main__line line"></div>
         </section>
