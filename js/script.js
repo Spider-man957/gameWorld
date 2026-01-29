@@ -213,37 +213,98 @@ dinoContainer.addEventListener("mousedown", () => {
   dino.classList.add("jump");
   setTimeout(() => dino.classList.remove("jump"), 1000);
 });
-// dinoContainer.addEventListener("mousedown", () => {
-
 let cactusSpawnNum = 0;
-do {
+function spawnCactus() {
+  if (cactusSpawnNum >= 10) return;
   let cactusRandom = Math.floor(Math.random() * 2);
-  let cactusTimeSpawn = Math.floor(Math.random() * 5) + 1;
   if (cactusRandom === 0) {
-    cactusSpawnNum++;
+    if (bigCactus.style.left === "0px") {
+      bigCactus.classList.remove("cactusGo");
+      bigCactus.classList.add("teleported");
+    }
     bigCactus.style.display = "block";
     bigCactus.classList.add("cactusGo");
     setTimeout(() => {
       bigCactus.classList.remove("cactusGo");
       bigCactus.style.display = "none";
     }, 6000);
-    if (bigCactus.style.left === "0px") {
-      bigCactus.classList.remove("cactusGo");
-      bigCactus.classList.add("teleported");
-    }
   }
   if (cactusRandom === 1) {
-    cactusSpawnNum++;
+    if (smallCactus.style.left === "0px") {
+      smallCactus.classList.remove("cactusGo");
+      smallCactus.classList.add("teleported");
+    }
     smallCactus.style.display = "block";
     smallCactus.classList.add("cactusGo");
     setTimeout(() => {
       smallCactus.classList.remove("cactusGo");
       smallCactus.style.display = "none";
     }, 6000);
-    if (smallCactus.style.left === "0px") {
-      smallCactus.classList.remove("cactusGo");
-      smallCactus.classList.add("teleported");
+  }
+  cactusSpawnNum++;
+  setTimeout(spawnCactus, 6000);
+}
+spawnCactus();
+
+// football
+let ball = document.getElementById("ball");
+let footballGround = document.getElementById("footballGround");
+let ballWidth = ball.getBoundingClientRect();
+footballGround.addEventListener("click", (e) => {
+  const rect = footballGround.getBoundingClientRect();
+  let x = e.clientX - rect.left;
+  let y = e.clientY - rect.top;
+  const radius = ballWidth.width / 2;
+  if (x < radius) x = radius;
+  if (x > rect.width - radius) x = rect.width - radius;
+  if (y < radius) y = radius;
+  if (y > rect.height - radius) y = rect.height - radius;
+  ball.style.left = x - 25 + "px";
+  ball.style.top = y - 25 + "px";
+});
+
+// tree numbers
+
+let firstNumberInput = document.getElementById("firstNumberInput");
+let seckondNumberInput = document.getElementById("seckondNumberInput");
+let thirdthNumberInput = document.getElementById("thirdthNumberInput");
+let numbersResult = document.getElementById("numbersResult");
+function getMaxNumber() {
+  if (
+    !firstNumberInput ||
+    !seckondNumberInput ||
+    !thirdthNumberInput ||
+    !numbersResult
+  ) {
+    return;
+  }
+  let numbers = [
+    Number(firstNumberInput.value),
+    Number(seckondNumberInput.value),
+    Number(thirdthNumberInput.value),
+  ];
+  if (
+    firstNumberInput.value.trim() === "" &&
+    seckondNumberInput.value.trim() === "" &&
+    thirdthNumberInput.value.trim() === ""
+  ) {
+    numbersResult.innerHTML = "Введіть хоча б одне число";
+    return;
+  }
+  if (
+    isNaN(firstNumberInput.value) ||
+    isNaN(seckondNumberInput.value) ||
+    isNaN(thirdthNumberInput.value)
+  ) {
+    numbersResult.innerHTML = "Ви ввели текст";
+    return;
+  }
+  let theBiggestNumber = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > theBiggestNumber) {
+      theBiggestNumber = numbers[i];
     }
   }
-} while (cactusSpawnNum === 10);
-// });
+  numbersResult.innerHTML = `Найбільше число, яке ви ввели - ${theBiggestNumber}`;
+}
+setInterval(getMaxNumber, 1000);

@@ -573,6 +573,10 @@ main .main__section {
   color: #000000;
 }
 
+main .main__section--dino {
+  width: 720px;
+}
+
 .main__section--dino {
   height: 297px;
   width: 720px;
@@ -613,6 +617,7 @@ main .main__section {
   height: 40px;
   display: none;
   position: absolute;
+  right: 0px;
 }
 .main__section--dino .jump {
   animation: dino_jump 1s;
@@ -629,12 +634,13 @@ main .main__section {
   }
 }
 .main__section--dino .cactusGo {
+  position: absolute;
+  right: 0px;
   animation: cactusGo 6s;
 }
 @keyframes cactusGo {
   0% {
     right: 0px;
-    display: block;
     opacity: 100%;
   }
   5% {
