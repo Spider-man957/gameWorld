@@ -136,7 +136,8 @@ calcBtnPlus.addEventListener("click", () => {
   ) {
     alert("You haven't wroten a number!!!");
   } else {
-    calcOperation = Number(calcFirstNumber.value) + Number(calcSeckondNumber.value);
+    calcOperation =
+      Number(calcFirstNumber.value) + Number(calcSeckondNumber.value);
   }
 });
 calcBtnMinus.addEventListener("click", () => {
@@ -148,7 +149,8 @@ calcBtnMinus.addEventListener("click", () => {
   ) {
     alert("You haven't wroten a number!!!");
   } else {
-    calcOperation = Number(calcFirstNumber.value) - Number(calcSeckondNumber.value);
+    calcOperation =
+      Number(calcFirstNumber.value) - Number(calcSeckondNumber.value);
   }
 });
 calcBtnNasobeni.addEventListener("click", () => {
@@ -160,7 +162,8 @@ calcBtnNasobeni.addEventListener("click", () => {
   ) {
     alert("You haven't wroten a number!!!");
   } else {
-    calcOperation = Number(calcFirstNumber.value) * Number(calcSeckondNumber.value);
+    calcOperation =
+      Number(calcFirstNumber.value) * Number(calcSeckondNumber.value);
   }
 });
 calcBtnDeleni.addEventListener("click", () => {
@@ -172,9 +175,75 @@ calcBtnDeleni.addEventListener("click", () => {
   ) {
     alert("You haven't wroten a number!!!");
   } else {
-    calcOperation = Number(calcFirstNumber.value) / Number(calcSeckondNumber.value);
+    calcOperation =
+      Number(calcFirstNumber.value) / Number(calcSeckondNumber.value);
   }
 });
 calcBtnResult.addEventListener("click", () => {
   calcResult.innerHTML = calcOperation;
 });
+
+// calc time
+let calcTimeInput = document.getElementById("calcTimeInput");
+let caclTimeBtn = document.getElementById("caclTimeBtn");
+let calcTimeResult = document.getElementById("calcTimeResult");
+caclTimeBtn.addEventListener("click", () => {
+  if (isNaN(calcTimeInput.value) || !calcTimeInput.value.trim()) {
+    alert("You haven't wroten a number!!!");
+  } else {
+    let yourTime = Number(calcTimeInput.value);
+    if (yourTime < 60) {
+      hour = 0;
+      min = yourTime;
+      calcTimeResult.innerHTML = hour + ":" + min;
+    } else {
+      let hour = Math.floor(yourTime / 60);
+      let min = yourTime - hour * 60;
+      calcTimeResult.innerHTML = hour + ":" + min;
+    }
+  }
+});
+
+// dino
+let dinoContainer = document.getElementById("dinoContainer");
+let dino = document.getElementById("dino");
+let bigCactus = document.getElementById("bigCactus");
+let smallCactus = document.getElementById("smallCactus");
+dinoContainer.addEventListener("mousedown", () => {
+  dino.classList.add("jump");
+  setTimeout(() => dino.classList.remove("jump"), 1000);
+});
+// dinoContainer.addEventListener("mousedown", () => {
+
+let cactusSpawnNum = 0;
+do {
+  let cactusRandom = Math.floor(Math.random() * 2);
+  let cactusTimeSpawn = Math.floor(Math.random() * 5) + 1;
+  if (cactusRandom === 0) {
+    cactusSpawnNum++;
+    bigCactus.style.display = "block";
+    bigCactus.classList.add("cactusGo");
+    setTimeout(() => {
+      bigCactus.classList.remove("cactusGo");
+      bigCactus.style.display = "none";
+    }, 6000);
+    if (bigCactus.style.left === "0px") {
+      bigCactus.classList.remove("cactusGo");
+      bigCactus.classList.add("teleported");
+    }
+  }
+  if (cactusRandom === 1) {
+    cactusSpawnNum++;
+    smallCactus.style.display = "block";
+    smallCactus.classList.add("cactusGo");
+    setTimeout(() => {
+      smallCactus.classList.remove("cactusGo");
+      smallCactus.style.display = "none";
+    }, 6000);
+    if (smallCactus.style.left === "0px") {
+      smallCactus.classList.remove("cactusGo");
+      smallCactus.classList.add("teleported");
+    }
+  }
+} while (cactusSpawnNum === 10);
+// });
