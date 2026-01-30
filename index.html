@@ -208,28 +208,26 @@
           <p class="main__result" id="numbersResult"></p>
           <div class="main__line line"></div>
         </section>
-        <section class="team">
+        <section class="team main__section">
           <h2 class="team__title">Наша команда</h2>
           <div class="team__slider">
-            <svg class="team__arrow team__arrow--left" width="52" height="101">
-              <use href="./symbols.svg#left_arow"></use>
-            </svg>
-            <svg class="team__arrow team__arrow--right" width="52" height="101">
-              <use href="./symbols.svg#right_arow"></use>
-            </svg>
-            <div class="team__slides"></div>
+            <div class="slider">
+              <svg class="team__arrow team__arrow--left" width="52" height="101" id="leftArrow">
+                <use href="./symbols.svg#left_arow"></use>
+              </svg>
+              
+              <div class="team__slides" id="photo"></div>
+              <svg class="team__arrow team__arrow--right" width="52" height="101" id="rightArrow">
+                <use href="./symbols.svg#right_arow"></use>
+              </svg>
+            </div>
           </div>
-          <p class="team__name">Ім’я студента</p>
-          <p class="team__info">Інформація про роботу, яку він/вона
-            виконав/ла</p>
+          <p class="team__name" id="imgName">Timur</p>
+          <p class="team__info" id="imgInfo">Розробник цього сайту</p>
           <ul class="team__list">
-            <li class="team__item"></li>
-            <li class="team__item"></li>
-            <li class="team__item"></li>
-            <li class="team__item"></li>
-            <li class="team__item"></li>
-            <li class="team__item"></li>
-            <li class="team__item"></li>
+            <li class="team__item" id="_1"></li>
+            <li class="team__item" id="_2"></li>
+            <li class="team__item" id="_3"></li>
           </ul>
           <div class="team__line line"></div>
         </section>

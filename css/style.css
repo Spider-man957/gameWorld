@@ -709,6 +709,103 @@ main .main__section--dino {
   color: #000;
 }
 
+.team {
+  height: 341px;
+  width: 906px;
+  justify-content: space-between;
+}
+.team .team__title {
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+.team .team__slider {
+  width: 906px;
+  height: 249px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 36px;
+}
+.team .slider {
+  width: 906px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+.team .team__slides {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  background-image: url(/img/myPhoto.jpg);
+  background-size: cover;
+  background-position: 80% 80%;
+  position: absolute;
+  right: 378px;
+}
+.team .team__arrow {
+  position: absolute;
+}
+.team .team__arrow--right {
+  right: 0px;
+}
+.team .team__arrow--left {
+  left: 0px;
+}
+
+.team__list {
+  width: 78px;
+  height: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 36px;
+}
+.team__list .team__item {
+  width: 18px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #d9d9d9;
+}
+
+.line_activ {
+  width: 30px;
+  background-color: #797979;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.team__name {
+  width: auto;
+  height: 17px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.team__info {
+  width: auto;
+  max-width: 350px;
+  height: 30px;
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
 .container {
   width: 1440px;
   min-width: 1440px;

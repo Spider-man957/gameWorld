@@ -308,3 +308,77 @@ function getMaxNumber() {
   numbersResult.innerHTML = `Найбільше число, яке ви ввели - ${theBiggestNumber}`;
 }
 setInterval(getMaxNumber, 1000);
+
+let rightArrow = document.getElementById("rightArrow");
+let leftArrow = document.getElementById("leftArrow");
+let photo = document.getElementById("photo");
+let imgName = document.getElementById("imgName");
+let imgInfo = document.getElementById("imgInfo");
+let zeroPhoto = "url(/img/myPhoto.jpg)";
+let firstPhoto = "url(/img/gpt.png)";
+let seckondPhoto = "url(/img/githup.png)";
+let photos = [zeroPhoto, firstPhoto, seckondPhoto];
+let line1 = document.getElementById("_1");
+let line2 = document.getElementById("_2");
+let line3 = document.getElementById("_3");
+let displayPhoto = 0;
+photo.style.backgroundImage = photos[displayPhoto];
+line1.classList.remove("team__item");
+line1.classList.add("line_activ");
+
+function controlImage() {
+  if (displayPhoto === 0) {
+    leftArrow.style.display = "none";
+  } else {
+    leftArrow.style.display = "block";
+  }
+  if (displayPhoto === photos.length - 1) {
+    rightArrow.style.display = "none";
+  } else {
+    rightArrow.style.display = "block";
+  }
+}
+rightArrow.addEventListener("click", () => {
+  displayPhoto++;
+  rightArrow.style.opacity = "100%";
+  photo.style.backgroundImage = photos[displayPhoto];
+  controlImage();
+  controlName();
+});
+leftArrow.addEventListener("click", () => {
+  displayPhoto = displayPhoto - 1;
+  leftArrow.style.opacity = "100%";
+  photo.style.backgroundImage = photos[displayPhoto];
+  controlImage();
+  controlName();
+});
+function controlName() {
+  imgName.style.textAlign = "center";
+  imgInfo.style.textAlign = "center";
+  line1.classList.remove("line_activ");
+  line2.classList.remove("line_activ");
+  line3.classList.remove("line_activ");
+  line1.classList.add("team__item");
+  line2.classList.add("team__item");
+  line3.classList.add("team__item");
+
+  if (displayPhoto === 0) {
+    imgName.innerHTML = "Timur";
+    imgInfo.innerHTML = "Розробник цього сайту";
+    line1.classList.add("line_activ");
+    line1.classList.remove("team__item");
+  }
+  if (displayPhoto === 1) {
+    imgName.innerHTML = "Chat GPT";
+    imgInfo.innerHTML = "допомагав у вирішенні різних проблем";
+    line2.classList.add("line_activ");
+    line2.classList.remove("team__item");
+  }
+  if (displayPhoto === 2) {
+    imgName.innerHTML = "githup";
+    imgInfo.innerHTML =
+      "сприяв зберіганню файлів, щоб їх не втратити, забезпечував постійний доступ до коду та допомагав ділитися ним";
+    line3.classList.add("line_activ");
+    line3.classList.remove("team__item");
+  }
+}
