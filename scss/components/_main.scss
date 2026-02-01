@@ -4,13 +4,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .main__section {
-    width: 536px;
-    margin-top: 36px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+}
+.main__section {
+  width: 536px;
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .main__subtitle {
   font-family: "Montserrat Alternates";
@@ -186,8 +186,8 @@ main {
     color: #000000;
     position: absolute;
     top: 56px;
-    // right: 220px;
-    left: 500px;
+    right: 220px;
+    // left: 500px;
     li {
       min-width: 90px;
       max-width: 120px;
@@ -448,6 +448,14 @@ main .main__section--dino {
   height: 341px;
   width: 906px;
   justify-content: space-between;
+  .team__line {
+    width: 536px;
+    height: 1px !important;
+    background-color: rgb(0, 0, 0);
+    margin: 20px 0;
+    display: block;
+    flex-shrink: 0;
+  }
   .team__title {
     font-family: "Montserrat Alternates";
     font-style: normal;
@@ -545,5 +553,225 @@ main .main__section--dino {
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
+  color: #000000;
+}
+
+.main__section--scientists {
+  width: 1090px;
+  min-width: 1090px;
+  height: 734px;
+  margin: 0 0 36px 0;
+  .main__subtitle {
+    margin-top: 36px;
+  }
+  .scientists-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 857px;
+    height: 215px;
+    font-family: "Montserrat Alternates";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    // text-align: right;
+    color: #ffffff;
+  }
+  .main__scientists-actions {
+    width: 380px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+  }
+  .main__scientists-action {
+    padding: 10px 20px;
+    height: 35px;
+    width: 227px;
+    border-radius: 20px;
+    background-color: #000000;
+    box-shadow: 3px 3px 0 0 rgba($color: #000000, $alpha: 0.25);
+  }
+  .main__scientists-action--alpha {
+    width: 282px !important;
+  }
+  .main__scientists-action--lifetime {
+    width: 380px !important;
+  }
+  .main__scientists-action--latest {
+    width: 329px !important;
+  }
+  .main__scientists-action--einstein {
+    width: 298px !important;
+  }
+  .main__scientists-action--surname-c {
+    width: 441px !important;
+  }
+  .main__scientists-action--name-a {
+    width: 375px !important;
+    padding-right: 0px;
+  }
+  .main__scientists-action--longest {
+    width: 368px !important;
+    height: 50px !important;
+  }
+  .main__scientists-action-last {
+    width: 489px;
+    height: 35px;
+    margin: 20px 50% 0 50%;
+    background-color: #000;
+    box-shadow: 3px 3px 0 0 rgba($color: #000000, $alpha: 0.25);
+    border-radius: 20px;
+    color: #ffffff;
+    font-family: "Montserrat Alternates";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 0 10px 20px;
+  }
+  .main__scientists-actions-second {
+    width: 441px;
+    height: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start !important;
+    text-align: left !important;
+  }
+  .main__scientists-list {
+    width: 577px;
+    height: 372px;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    gap: 36px 59px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+  .main__scientists-item {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #d9d9d9;
+  }
+}
+
+.footer {
+  width: 1440px;
+  height: 220px;
+  background-color: #fff;
+  margin: 0 auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_logo {
+  width: 165px;
+  height: 70px;
+}
+.footer__contacts-list {
+  width: 207px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__contacts {
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  // line-height: 170%;
+  color: #000000;
+  display: block;
+}
+.footer__subscribe {
+  width: 347px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer__subscribe-form {
+  width: 347px;
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5px;
+}
+.footer__subscribe-input {
+  width: 204px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: #d7d7d7;
+  color: #7e7e7e;
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #7e7e7e;
+}
+.footer__subscribe-btn {
+  width: 107px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: #000;
+  color: #fff;
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+.footer__subscribe-note {
+  width: 254px;
+  height: 7px;
+  font-family: "Montserrat Alternates";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6px;
+  line-height: 7px;
+  color: #000000;
+}
+// modal second
+.second_modal-container {
+  width: 463px;
+  height: 245px;
+  border-radius: 20px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .modal__img-list {
+    position: absolute;
+    width: 378px;
+    height: 106px;
+    left: 43px;
+    top: 69px;
+  }
+}
+.seckond_modal {
+  display: none;
+}
+.modal__thanks {
+  position: absolute;
+  width: 188px;
+  height: 24px;
+  left: 138px;
+  top: 83px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
   color: #000000;
 }

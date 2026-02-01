@@ -183,14 +183,17 @@
           <div class="dino_container" id="dinoContainer">
             <img src="./img/dino.png" alt="dino" id="dino">
             <div class="dino_line"></div>
-            <img src="./img/wild_cactus/wild_cactus_13.png" alt="wild cactus" class="big_cactus" id="bigCactus">
-            <img src="./img/wild_cactus/wild_cactus_9.png" alt="wild cactus" class="small_cactus" id="smallCactus">
+            <img src="./img/wild_cactus/wild_cactus_13.png" alt="wild cactus"
+              class="big_cactus" id="bigCactus">
+            <img src="./img/wild_cactus/wild_cactus_9.png" alt="wild cactus"
+              class="small_cactus" id="smallCactus">
           </div>
           <div class="main__line line"></div>
         </section>
         <section class="main__section main__section--football">
           <h2 class="main__subtitle">Футбол</h2>
-          <div class="main__football-field pole_for_footboll" id="footballGround">
+          <div class="main__football-field pole_for_footboll"
+            id="footballGround">
             <img src="./img/ball.png" alt="ball" class="main_ball" id="ball">
           </div>
           <div class="main__line line"></div>
@@ -199,11 +202,14 @@
           <h2 class="main__subtitle">Введіть 3 числа</h2>
           <ul class="main__numbers-list">
             <li class="main__numbers-item"><input class="main__input"
-                type="text" placeholder="Введіть число" id="firstNumberInput"></li>
+                type="text" placeholder="Введіть число"
+                id="firstNumberInput"></li>
             <li class="main__numbers-item"><input class="main__input"
-                type="text" placeholder="Введіть число" id="seckondNumberInput"></li>
+                type="text" placeholder="Введіть число"
+                id="seckondNumberInput"></li>
             <li class="main__numbers-item"><input class="main__input"
-                type="text" placeholder="Введіть число" id="thirdthNumberInput"></li>
+                type="text" placeholder="Введіть число"
+                id="thirdthNumberInput"></li>
           </ul>
           <p class="main__result" id="numbersResult"></p>
           <div class="main__line line"></div>
@@ -212,12 +218,14 @@
           <h2 class="team__title">Наша команда</h2>
           <div class="team__slider">
             <div class="slider">
-              <svg class="team__arrow team__arrow--left" width="52" height="101" id="leftArrow">
+              <svg class="team__arrow team__arrow--left" width="52" height="101"
+                id="leftArrow">
                 <use href="./symbols.svg#left_arow"></use>
               </svg>
-              
+
               <div class="team__slides" id="photo"></div>
-              <svg class="team__arrow team__arrow--right" width="52" height="101" id="rightArrow">
+              <svg class="team__arrow team__arrow--right" width="52"
+                height="101" id="rightArrow">
                 <use href="./symbols.svg#right_arow"></use>
               </svg>
             </div>
@@ -229,7 +237,7 @@
             <li class="team__item" id="_2"></li>
             <li class="team__item" id="_3"></li>
           </ul>
-          <div class="team__line line"></div>
+          <div class="team__line"></div>
         </section>
         <section class="main__section main__section--scientists">
           <h2 class="main__subtitle">Обери вченого/их</h2>
@@ -247,44 +255,67 @@
             <li class="main__scientists-item"></li>
             <li class="main__scientists-item"></li>
           </ul>
-          <ul class="main__scientists-actions">
-            <li class="main__scientists-action"><button class="main__btn">Які
-                вчені народилися в 19 ст.</button></li>
-            <li class="main__scientists-action"><button
-                class="main__btn">Відсортувати вчених за алфавітом</button></li>
-            <li class="main__scientists-action"><button
-                class="main__btn">Відсортувати вчених за кількістю прожитих
-                років</button></li>
-            <li class="main__scientists-action"><button class="main__btn">Знайти
-                вченого, який народився найпізніше</button></li>
-            <li class="main__scientists-action"><button class="main__btn">Знайти
-                рік народження Albert Einshtein</button></li>
-            <li class="main__scientists-action"><button class="main__btn">Знайти
-                вчених, прізвища яких починаються на на літеру “С”
-              </button></li>
-            <li class="main__scientists-action"><button
-                class="main__btn">Видалити всіх вчених, ім’я яких починається на
-                “А”</button></li>
-            <li class="main__scientists-action"><button class="main__btn">Знайти
+          <ul class="scientists-block">
+            <ul class="main__scientists-actions">
+              <li class="main__scientists-action">Які вчені народилися в 19
+                ст.</li>
+              <li
+                class="main__scientists-action main__scientists-action--alpha">Відсортувати
+                вчених за
+                алфавітом</li>
+              <li
+                class="main__scientists-action main__scientists-action--lifetime">Відсортувати
+                вчених за кількістю прожитих
+                років</li>
+              <li
+                class="main__scientists-action main__scientists-action--latest">Знайти
+                вченого, який народився найпізніше</li>
+            </ul>
+            <ul
+              class="main__scientists-actions-second">
+              <li
+                class="main__scientists-action main__scientists-action--einstein">Знайти
+                рік народження Albert
+                Einshtein</li>
+              <li
+                class="main__scientists-action main__scientists-action--surname-c">Знайти
+                вчених, прізвища яких починаються на літеру “С”</li>
+              <li
+                class="main__scientists-action main__scientists-action--name-a">Видалити
+                всіх вчених, ім’я яких починається
+                на “А”</li>
+              <li
+                class="main__scientists-action main__scientists-action--longest">Знайти
                 вченого, який прожив найдовше і вченого, який прожив
-                найменше</button></li>
-            <li class="main__scientists-action"><button class="main__btn">Знайти
-                вчених, в яких співпадають перші літери імені і
-                прізвища</button></li>
+                найменше</li>
+            </ul>
           </ul>
+          <div class="main__scientists-action-last">1. Знайти вчених, в яких
+            співпадають перші літери імені і прізвища</div>
         </section>
       </main>
       <footer class="footer footer--bottom">
-        <div class="footer__logo logo">
-          <svg class="logo__icon" width="42" height="39">
-            <use href="./symbols.svg#logo"></use>
-          </svg>
-          <p class="logo__text">Coding <span
-              class="logo__text--accent">Magic</span></p>
-        </div>
-        <p class="footer__contacts">Тел: +38 (123) 456 78 90 E-Mail:
-          codingmagic@gmail.com Facebook: CodingMagic Twitter: CodingMagic
-          Instagram: CodingMagic</p>
+        <svg width="165" height="70" class="footer_logo">
+          <use href="./symbols.svg#footer_logo">
+          </use>
+        </svg>
+        <ul class="footer__contacts-list">
+          <li class="footer__contacts">
+            Тел: +38 (123) 456 78 90
+          </li>
+          <li class="footer__contacts">
+            E-Mail: codingmagic@gmail.com
+          </li>
+          <li class="footer__contacts">
+            Facebook: CodingMagic
+          </li>
+          <li class="footer__contacts">
+            Twitter: CodingMagic
+          </li>
+          <li class="footer__contacts">
+            Instagram: CodingMagic
+          </li>
+        </ul>
         <div class="footer__subscribe">
           <div class="footer__subscribe-form">
             <input class="footer__subscribe-input" type="text"
@@ -296,20 +327,27 @@
         </div>
       </footer>
     </div>
-    <!-- <div class="modal modal--second seckond_modal">
-      <button class="modal__close-btn">
-        <svg class="modal__close-icon" width="16" height="16">
-          <use href="./symbols.svg#close_modal"></use>
-        </svg>
-      </button>
-      <p class="modal__thanks">Дякую за підписку!</p>
-      <ul class="modal__img-list">
-        <li class="modal__img-item"><img class="modal__img" src="./img/knife.png" alt="knife"></li>
-        <li class="modal__img-item"><img class="modal__img" src="./img/puzzel.png" alt="puzzle"></li>
-        <li class="modal__img-item"><img class="modal__img" src="./img/game_developer.png" alt="game_developer"></li>
-        <li class="modal__img-item"><img class="modal__img" src="./img/tic_tuc_toy.png" alt="tic_tac_toe"></li>
-      </ul>
-    </div> -->
+
+    <div class="modal modal--second seckond_modal">
+      <div class="second_modal-container">
+        <button class="modal__close-btn">
+          <svg class="modal__close-icon" width="16" height="16">
+            <use href="./symbols.svg#close_modal"></use>
+          </svg>
+        </button>
+        <p class="modal__thanks">Дякую за підписку!</p>
+        <ul class="modal__img-list">
+          <li class="modal__img-item"><img class="modal__img"
+              src="./img/knife.png" alt="knife"></li>
+          <li class="modal__img-item"><img class="modal__img"
+              src="./img/puzzel.png" alt="puzzle"></li>
+          <li class="modal__img-item"><img class="modal__img"
+              src="./img/game_developer.png" alt="game_developer"></li>
+          <li class="modal__img-item"><img class="modal__img"
+              src="./img/tic_tuc_toy.png" alt="tic_tac_toe"></li>
+        </ul>
+      </div>
+    </div>
     <script src="./js/script.js"></script>
   </body>
 </html>
