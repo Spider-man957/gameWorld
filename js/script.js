@@ -383,6 +383,8 @@ function controlName() {
   }
 }
 
+// scientists
+
 const scientists = [
   {
     name: "Albert",
@@ -469,3 +471,51 @@ const scientists = [
     id: 12,
   },
 ];
+let filteredBloks;
+let Albert = document.getElementById("Albert");
+let Isaac = document.getElementById("Isaac");
+let Galileo = document.getElementById("Galileo");
+let Marie = document.getElementById("Marie");
+let Johannes = document.getElementById("Johannes");
+let Nicolaus = document.getElementById("Nicolaus");
+let Max = document.getElementById("Max");
+let Katherine = document.getElementById("Katherine");
+let Ada = document.getElementById("Ada");
+let Sarah = document.getElementById("Sarah");
+let LiseMeitner = document.getElementById("LiseMeitner");
+let HannaHammarström = document.getElementById("HannaHammarström");
+let scientistsList = document.getElementById("scientistsList");
+let scientistsName = [
+  Albert,
+  Isaac,
+  Galileo,
+  Marie,
+  Johannes,
+  Nicolaus,
+  Max,
+  Katherine,
+  Ada,
+  Sarah,
+  LiseMeitner,
+  HannaHammarström,
+];
+function bornOn1800Plus(scientists, scientistsName) {
+  for (let i = 0; i < scientists.length; i++) {
+    if (scientists[i].born >= 1800) {
+      filteredBloks = true;
+    } else {
+      filteredBloks = false;
+    }
+    if (filteredBloks === false) {
+      scientistsName[i].style.display = "none";
+    }
+  }
+}
+function alphavitFilter(scientists, scientistsName) {
+  scientistsName.textContent.sort();
+  scientistsList.appendChild()
+}
+let btn19st = document.getElementById("btn19st");
+btn19st.addEventListener("click", () => {
+  bornOn1800Plus(scientists, scientistsName);
+});

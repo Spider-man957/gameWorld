@@ -12,67 +12,67 @@
       rel="stylesheet">
   </head>
   <body class="page">
-    <div class="page__container container">
-      <div class="modal modal--first" id="first_modal">
-        <div class="modal__container">
-          <button class="modal__close-btn" id="modal1_close-btn">
-            <svg class="modal__close-icon" width="16" height="16">
-              <use href="./symbols.svg#close_modal"></use>
-            </svg>
-          </button>
-          <p class="modal__greeting">
-            Привіт! <br>
-            Ви потрапили на сайт інтерактивних ігор та завдань Надіємось, що вам
-            сподобається і ви отримаєте позитивні емоції! Бажаємо Вам гарно
-            провести час!
-          </p>
-          <p class="modal__input-label">Введіть своє ім’я:</p>
-          <input class="modal__input" type="text" placeholder="Ваше ім’я...">
-          <button class="modal__save-btn" id="modal_btn-save">Зберегти</button>
-          <ul class="modal__img-list">
-            <li class="modal__img-item"><img class="modal__img"
-                src="./img/knife.png" alt="knife"></li>
-            <li class="modal__img-item"><img class="modal__img"
-                src="./img/puzzel.png" alt="puzzle"></li>
-            <li class="modal__img-item"><img class="modal__img"
-                src="./img/game_developer.png" alt="game_developer"></li>
-            <li class="modal__img-item"><img class="modal__img"
-                src="./img/tic_tuc_toy.png" alt="tic_tac_toe"></li>
-          </ul>
+    <div class="modal modal--first" id="first_modal">
+      <div class="modal__container">
+        <button class="modal__close-btn" id="modal1_close-btn">
+          <svg class="modal__close-icon" width="16" height="16">
+            <use href="./symbols.svg#close_modal"></use>
+          </svg>
+        </button>
+        <p class="modal__greeting">
+          Привіт! <br>
+          Ви потрапили на сайт інтерактивних ігор та завдань Надіємось, що вам
+          сподобається і ви отримаєте позитивні емоції! Бажаємо Вам гарно
+          провести час!
+        </p>
+        <p class="modal__input-label">Введіть своє ім’я:</p>
+        <input class="modal__input" type="text" placeholder="Ваше ім’я...">
+        <button class="modal__save-btn" id="modal_btn-save">Зберегти</button>
+        <ul class="modal__img-list">
+          <li class="modal__img-item"><img class="modal__img"
+              src="./img/knife.png" alt="knife"></li>
+          <li class="modal__img-item"><img class="modal__img"
+              src="./img/puzzel.png" alt="puzzle"></li>
+          <li class="modal__img-item"><img class="modal__img"
+              src="./img/game_developer.png" alt="game_developer"></li>
+          <li class="modal__img-item"><img class="modal__img"
+              src="./img/tic_tuc_toy.png" alt="tic_tac_toe"></li>
+        </ul>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header-container">
+        <div class="header__logo logo">
+          <svg class="logo__icon" width="42" height="39">
+            <use href="./symbols.svg#logo"></use>
+          </svg>
+          <p class="logo__text">Coding <span
+              class="logo__text--accent">Magic</span></p>
+        </div>
+        <div class="header__dropdown">
+          <p class="header__dropdown-title">Інтерактив</p>
+          <svg class="header__dropdown-arrow" width="10" height="6">
+            <use href="./symbols.svg#arow"></use>
+          </svg>
+        </div>
+        <ul class="header__list">
+          <li class="header__item">
+            <p class="header__link"> <a href="#" class="header__link">Наша
+                команда</a></p>
+          </li>
+          <li>
+            <p class="header__link"> <a href="#"
+                class="header__link">Контакти</a></p>
+          </li>
+        </ul>
+        <div class="header_welcome-block">
+          <img class="header__mode-img" src="./img/black_mode.png"
+            alt="black_mode">
+          <p class="header__welcome" id="header_name-wlk">Вітаємо, User!</p>
         </div>
       </div>
-      <header class="header">
-        <div class="header-container">
-          <div class="header__logo logo">
-            <svg class="logo__icon" width="42" height="39">
-              <use href="./symbols.svg#logo"></use>
-            </svg>
-            <p class="logo__text">Coding <span
-                class="logo__text--accent">Magic</span></p>
-          </div>
-          <div class="header__dropdown">
-            <p class="header__dropdown-title">Інтерактив</p>
-            <svg class="header__dropdown-arrow" width="10" height="6">
-              <use href="./symbols.svg#arow"></use>
-            </svg>
-          </div>
-          <ul class="header__list">
-            <li class="header__item">
-              <p class="header__link"> <a href="#" class="header__link">Наша
-                  команда</a></p>
-            </li>
-            <li>
-              <p class="header__link"> <a href="#"
-                  class="header__link">Контакти</a></p>
-            </li>
-          </ul>
-          <div class="header_welcome-block">
-            <img class="header__mode-img" src="./img/black_mode.png"
-              alt="black_mode">
-            <p class="header__welcome" id="header_name-wlk">Вітаємо, User!</p>
-          </div>
-        </div>
-      </header>
+    </header>
+    <div class="page__container container">
       <main class="main">
         <section class="main__section main__section--games">
           <h1 class="main__title">Популярні інетрактивні ігри</h1>
@@ -241,23 +241,38 @@
         </section>
         <section class="main__section main__section--scientists">
           <h2 class="main__subtitle">Обери вченого/их</h2>
-          <ul class="main__scientists-list">
-            <li class="main__scientists-item"></li>
-            <li class="main__scientists-item"></li>
-            <li class="main__scientists-item"></li>
-            <li class="main__scientists-item"></li>
-            <li class="main__scientists-item"></li>
-            <li class="main__scientists-item"></li>
-            <li class="main__scientists-item"></li>
-            <li class="main__scientists-item"></li>
-            <li class="main__scientists-item"></li>
-            <li class="main__scientists-item"></li>
-            <li class="main__scientists-item"></li>
-            <li class="main__scientists-item"></li>
+          <ul class="main__scientists-list" id="scientistsList">
+            <li class="main__scientists-item" id="Albert"><p>Albert Einstein</p> <p> 1879 -
+                1955</p></li>
+            <li class="main__scientists-item" id="Isaac"><p>Isaac Newton </p> <p> 1643 -
+                1727</p></li>
+            <li class="main__scientists-item" id="Galileo"><p>Galileo Galilei</p> <p> 1564 -
+                1642</p></li>
+            <li class="main__scientists-item" id="Marie"><p>Marie Curie </p> <p> 1867 -
+                1934</p></li>
+            <li class="main__scientists-item"  id="Johannes"><p>Johannes Kepler</p> <p> 1571 -
+                1630</p></li>
+            <li class="main__scientists-item"  id="Nicolaus"><p>Nicolaus Copernicus</p> <p>1473
+                -
+                1543</p></li>
+            <li class="main__scientists-item"  id="Max"><p>Max Planck</p> <p> 1858 -
+                1947</p></li>
+            <li class="main__scientists-item" id="Katherine"><p>Katherine Blodgett</p> <p> 1898
+                -
+                1979</p></li>
+            <li class="main__scientists-item" id="Ada"> <p>Ada Lovelace</p> <p>1815 -
+                1852</p></li>
+            <li class="main__scientists-item" id="Sarah"><p>Sarah E. Goode</p> <p> 1855 -
+                1905</p></li>
+            <li class="main__scientists-item" id="LiseMeitner"><p>Lise Meitner</p> <p> 1878 -
+                1968</p></li>
+            <li class="main__scientists-item" id="HannaHammarström"><p>Hanna Hammarström</p> <p> 1829
+                - 1909
+              </p></li>
           </ul>
           <ul class="scientists-block">
             <ul class="main__scientists-actions">
-              <li class="main__scientists-action">Які вчені народилися в 19
+              <li class="main__scientists-action" id="btn19st">Які вчені народилися в 19
                 ст.</li>
               <li
                 class="main__scientists-action main__scientists-action--alpha">Відсортувати
@@ -327,7 +342,6 @@
         </div>
       </footer>
     </div>
-
     <div class="modal modal--second seckond_modal">
       <div class="second_modal-container">
         <button class="modal__close-btn">
